@@ -8,7 +8,8 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder
 object HibernateUtil {
     // Create Registry
     private val registry: StandardServiceRegistry = StandardServiceRegistryBuilder().configure().build()
-    var sessionFactory : SessionFactory? = null
+    var sessionFactory: SessionFactory? = null
+
     init {
         try {
             // Create sources
@@ -25,7 +26,7 @@ object HibernateUtil {
         }
     }
 
-    fun shutdown () {
+    fun shutdown() {
         StandardServiceRegistryBuilder.destroy(registry)
     }
 }

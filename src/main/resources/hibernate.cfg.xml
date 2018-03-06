@@ -11,6 +11,7 @@
 
 <hibernate-configuration>
     <session-factory>
-
+        <mapping class="Entity.Customer"></mapping>
+        <mapping class="Entity.Address"></mapping>
     </session-factory>
 </hibernate-configuration>

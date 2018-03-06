@@ -6,30 +6,29 @@ import java.io.Serializable
 import org.hibernate.HibernateException
 
 
-
 abstract class CrudRepository<T, in ID : Serializable> {
     val sessionFactory = HibernateUtil.sessionFactory
 
-    abstract fun getDomainClass() : Class<T>
+    abstract fun getDomainClass(): Class<T>
 
-    fun openSession() : Session {
+    fun openSession(): Session {
         return sessionFactory!!.openSession()
     }
 
     /**
      * Busca uma entidade pelo ID
      */
-    fun findById(id: ID) : T? {
+    fun findById(id: ID): T? {
         val classType = getDomainClass()
         val session = openSession()
         session.transaction.begin()
 
-        var entity : T? = null
+        var entity: T? = null
 
         try {
             entity = session.get(classType, id)
             session.transaction.commit()
-        } catch (e : Exception) {
+        } catch (e: Exception) {
             session.transaction.rollback()
         } finally {
             session.close()
@@ -41,7 +40,7 @@ abstract class CrudRepository<T, in ID : Serializable> {
     /**
      * Retorna uma lista de entidades
      */
-    fun findAll() : List<T> {
+    fun findAll(): List<T> {
         val session = openSession()
 
         val classType = getDomainClass()
@@ -64,7 +63,7 @@ abstract class CrudRepository<T, in ID : Serializable> {
     /**
      * Salva ou atualiza entidade
      */
-    fun save(entity: T) : T? {
+    fun save(entity: T): T? {
         val session = openSession()
         session.transaction.begin()
 
@@ -81,7 +80,7 @@ abstract class CrudRepository<T, in ID : Serializable> {
         return null
     }
 
-    fun delete(entity: T)  {
+    fun delete(entity: T) {
         val session = openSession()
         session.transaction.begin()
 
