@@ -2,6 +2,7 @@ package Controllers
 
 import javafx.fxml.FXML
 import javafx.scene.control.Button
+import javafx.scene.control.Label
 
 class MenuController {
     @FXML
@@ -15,7 +16,8 @@ class MenuController {
 
     @FXML
     fun switchToProducts() {
-        println("Menu: Produtos clicado")
+        val label = Label("Produtos")
+        MainController.switchView(label)
     }
 
     @FXML
