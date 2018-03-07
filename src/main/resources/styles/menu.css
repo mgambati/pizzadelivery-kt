@@ -1,0 +1,23 @@
+.main-menu-pane {
+    -fx-background-color: #000;
+}
+.main-menu-logo {
+    -fx-text-fill: #fff;
+    -fx-font-family: "Roboto Slab";
+    -fx-font-size: 24;
+}
+
+.main-menu-item {
+    -fx-background-color: #000;
+    -fx-text-fill: #fff;
+    -fx-background-radius: none;
+    -fx-font-family: Roboto;
+    -fx-font-size: 18;
+    -fx-cursor: hand;
+}
+
+.main-menu-item:hover {
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+
+}
