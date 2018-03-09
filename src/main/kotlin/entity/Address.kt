@@ -1,9 +1,9 @@
 package entity
 
-import schema.AddressesTable
 import org.jetbrains.exposed.dao.EntityID
 import org.jetbrains.exposed.dao.IntEntity
 import org.jetbrains.exposed.dao.IntEntityClass
+import schema.AddressesTable
 
 class Address(id: EntityID<Int>) : IntEntity(id) {
     companion object : IntEntityClass<Address>(AddressesTable)

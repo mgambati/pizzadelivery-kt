@@ -1,9 +1,9 @@
 package util
 
-import schema.*
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
+import schema.*
 
 /**
  * Inicia a conexão com o banco e cria as tabelas necessárias.

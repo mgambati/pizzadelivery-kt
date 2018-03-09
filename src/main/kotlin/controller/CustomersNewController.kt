@@ -81,7 +81,7 @@ class CustomersNewController : Initializable {
                         street = ad.street
                         district = ad.district
                         city = ad.city
-                        state = ad.state.slice(0..1)
+                        state = ad.state.slice(0 .. 1)
                         customer = newCustomer
                     }
                 }

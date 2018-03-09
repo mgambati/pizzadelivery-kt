@@ -10,12 +10,14 @@ import javafx.stage.Stage
 import java.net.URL
 
 class MainController : Application() {
+    // Companion object seria equivalente ao static
     companion object {
         val rootView = BorderPane()
         fun switchView(view: Node) {
             rootView.center = view
         }
     }
+
     override fun start(primaryStage: Stage?) {
         val menuUrl: URL = javaClass.getResource("/components/menu.fxml")
         val menu: AnchorPane = FXMLLoader.load(menuUrl)
