@@ -1,4 +1,4 @@
-package Schema
+package schema
 
 import org.jetbrains.exposed.sql.ReferenceOption
 import org.jetbrains.exposed.sql.Table

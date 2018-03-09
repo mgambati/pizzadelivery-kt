@@ -1,0 +1,52 @@
+
+.main-pane {
+    -fx-background-color: #212633;
+    -fx-text-fill: #fff;
+}
+
+Label {
+    -fx-text-fill: #fff;
+    -fx-font-size: 20;
+    -fx-font-family: "Roboto";
+}
+
+.main-title {
+    -fx-font-size: 40;
+    -fx-font-family: "Roboto Slab";
+    -fx-font-weight: 700;
+}
+
+TextField {
+    -fx-background-radius: none;
+    -fx-border-width: 0;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 20;
+    -fx-pref-height: 30;
+}
+
+
+TextField:focused {
+    -fx-background-color: rgb(234, 244, 255);
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+}
+
+Button.action {
+    -fx-font-size: 18;
+    -fx-background-radius: none;
+    -fx-background-color: #FFF;
+    -fx-font-family: "Roboto Slab";
+    -fx-pref-height: 30;
+}
+
+Button.action:hover {
+    -fx-background-color: rgb(234, 244, 255);
+    -fx-cursor: hand;
+}
+
+Button.action.small {
+    -fx-font-size: 15;
+}
+
+TableView .column-header {
+    -fx-background-color: #212633;
+}

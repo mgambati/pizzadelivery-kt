@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="onSave" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="790.0" styleClass="main-pane" stylesheets="@../styles/forms.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomersEditController">
+   <children>
+      <Label layoutX="35.0" layoutY="43.0" styleClass="main-title" text="Editando cliente" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="50.0">
+
+      </Label>
+      <TextField fx:id="nameField" layoutX="58.0" layoutY="167.0" prefHeight="50.0" prefWidth="350.0" AnchorPane.leftAnchor="40.0">
+
+      </TextField>
+      <Label layoutX="59.0" layoutY="133.0" text="Nome do cliente:" AnchorPane.leftAnchor="40.0">
+
+      </Label>
+      <TextField fx:id="phoneField" layoutX="40.0" layoutY="262.0" prefHeight="50.0" prefWidth="350.0" AnchorPane.leftAnchor="40.0">
+
+      </TextField>
+      <Label layoutX="40.0" layoutY="228.0" text="Telefone" AnchorPane.leftAnchor="40.0">
+
+      </Label>
+      <Button layoutX="44.0" layoutY="526.0" mnemonicParsing="false" onAction="#onSave" prefWidth="172.0" styleClass="action" text="Salvar" AnchorPane.leftAnchor="40.0" />
+   </children>
+</AnchorPane>

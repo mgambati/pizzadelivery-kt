@@ -1,6 +1,6 @@
-package Entity
+package entity
 
-import Schema.AddressesTable
+import schema.AddressesTable
 import org.jetbrains.exposed.dao.EntityID
 import org.jetbrains.exposed.dao.IntEntity
 import org.jetbrains.exposed.dao.IntEntityClass
