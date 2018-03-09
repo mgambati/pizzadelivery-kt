@@ -1,6 +1,7 @@
 package schema
 
 import org.jetbrains.exposed.dao.IntIdTable
+import org.jetbrains.exposed.sql.ReferenceOption
 
 object AddressesTable : IntIdTable() {
     val number = integer("number")
@@ -9,5 +10,5 @@ object AddressesTable : IntIdTable() {
     val city = varchar("city", 255)
     val state = varchar("state", 2)
 
-    val customerId = reference("customer_id", CustomersTable)
+    val customerId = reference("customer_id", CustomersTable, ReferenceOption.CASCADE)
 }
